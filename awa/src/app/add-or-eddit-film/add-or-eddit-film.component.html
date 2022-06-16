@@ -1,0 +1,31 @@
+<div class="container my-5 text-center">
+  <div class="form-floating mb-3">
+    <input
+      type="text"
+      class="form-control"
+      id="floatingInput"
+      placeholder="Nom du Film"
+      [formControl]="nfControl"
+    />
+    <label for="floatingInput">Nom du Film</label>
+  </div>
+
+  <div class="form-floating mb-3">
+    <textarea
+      class="form-control"
+      placeholder="Description"
+      id="floatingTextarea2"
+      style="height: 100px"
+      [formControl]="bookDescriptionControl"
+    ></textarea>
+    <label for="floatingTextarea2">Description</label>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-l btn-primary"
+    (click)="submitFilm()"
+  >
+    Valider
+  </button>
+</div>

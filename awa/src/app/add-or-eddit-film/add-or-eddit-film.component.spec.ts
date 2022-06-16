@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookFormComponent } from './book-form.component';
+import { AddOrEdditFilmComponent } from './add-or-eddit-film.component';
 
-describe('BookFormComponent', () => {
-  let component: BookFormComponent;
-  let fixture: ComponentFixture<BookFormComponent>;
+describe('AddOrEdditFilmComponent', () => {
+  let component: AddOrEdditFilmComponent;
+  let fixture: ComponentFixture<AddOrEdditFilmComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookFormComponent ]
+      declarations: [ AddOrEdditFilmComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BookFormComponent);
+    fixture = TestBed.createComponent(AddOrEdditFilmComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
