@@ -46,4 +46,7 @@ export class AddOrEdditFilmComponent {
   }
 
   @Output() rate = new EventEmitter<number>();
+  submitFilmOutput() {
+    this.rate.emit(1);
+  }
 }
