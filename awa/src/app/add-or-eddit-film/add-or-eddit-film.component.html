@@ -1,4 +1,6 @@
 <div class="container my-5 text-center">
+  <h1 class="text-start fs-3">Add Film</h1>
+
   <div class="form-floating mb-3">
     <input
       type="text"
@@ -16,16 +18,12 @@
       placeholder="Description"
       id="floatingTextarea2"
       style="height: 100px"
-      [formControl]="bookDescriptionControl"
+      [formControl]="dfControl"
     ></textarea>
     <label for="floatingTextarea2">Description</label>
   </div>
 
-  <button
-    type="submit"
-    class="btn btn-l btn-primary"
-    (click)="submitFilm()"
-  >
+  <button type="submit" class="btn btn-lg btn-primary" (click)="submitFilm()">
     Valider
   </button>
 </div>

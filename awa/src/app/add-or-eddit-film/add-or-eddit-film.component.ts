@@ -7,11 +7,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./add-or-eddit-film.component.css'],
 })
 export class AddOrEdditFilmComponent {
-  nfControl = new FormControl();
-  bookDescriptionControl = new FormControl();
+  nfControl = new FormControl(); //titre
+  dfControl = new FormControl(); //description
 
   submitFilm() {
     console.log(this.nfControl.value);
-    console.log(this.bookDescriptionControl.value);
+    console.log(this.dfControl.value);
   }
 }
