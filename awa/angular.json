@@ -21,7 +21,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "src/styles/bootstrap-5.2.0-beta1-dist"
+              "src/styles/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
