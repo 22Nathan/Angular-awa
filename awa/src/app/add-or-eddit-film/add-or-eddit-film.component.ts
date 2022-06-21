@@ -6,47 +6,30 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-or-eddit-film',
   templateUrl: './add-or-eddit-film.component.html',
   styleUrls: ['./add-or-eddit-film.component.css'],
 })
-export class AddOrEdditFilmComponent {
-  nfControl = new FormControl(); //titre
-  dfControl = new FormControl(); //description
+export class AddOrEditFilmComponent {
+  addOrEditFilmForm = new FormGroup({
+    title: new FormControl('', [Validators.required]),
+    description: new FormControl('', []),
+    note: new FormControl<number | null>(null, [
+      Validators.min(0),
+      Validators.max(5),
+    ]),
+  });
 
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  @Output() onSave: EventEmitter<any> = new EventEmitter();
 
-  submitFilm() {
-    if (!this.nfControl.value && !this.dfControl.value) {
-      console.log('champs vides');
-    } else {
-      const div = this.renderer.createElement('div');
-      let card = this.renderer.createElement('div');
-      card.classList.add('container');
-      card.innerHTML =
-        '' +
-        '<div class="card my-3">' +
-        '<h5 class="card-header">' +
-        this.nfControl.value +
-        '</h5>' +
-        '<div class="card-body">' +
-        '<h5 class="card-title">Description</h5>' +
-        '<p class="card-text">' +
-        this.dfControl.value +
-        '</p>' +
-        '</div>' +
-        '</div>';
-
-      this.renderer.appendChild(div, card);
-      this.renderer.appendChild(this.el.nativeElement, div);
-    }
-  }
-
-  @Output() rate = new EventEmitter<number>();
-  submitFilmOutput() {
-    this.rate.emit(1);
+  save() {
+    this.onSave.emit({
+      title: this.addOrEditFilmForm.controls.filmTitle.value,
+      description: this.addOrEditFilmForm.controls.filmSys.value,
+      note: this.addOrEditFilmForm.controls.filmNote.value,
+    });
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Film } from './film';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'awa';
 
-  onRate(rr: any) {
-    console.log(rr);
+  films: any[] = [];
+
+  addOrUpdateFilm(film: Film) {
+    this.films.push(film);
   }
 }
