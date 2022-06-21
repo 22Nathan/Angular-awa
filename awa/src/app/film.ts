@@ -3,9 +3,9 @@ export class Film {
   description?: string;
   note?: number;
 
-  constructor(args: Book = {}) {
+  constructor(args: Film = {}) {
     this.titre = args.titre;
     this.description = args.description;
-    this.note = args.note
+    this.note = args.note;
   }
 }

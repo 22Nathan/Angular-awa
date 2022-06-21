@@ -15,7 +15,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddOrEdditFilmComponent {
   addOrEditFilmForm = new FormGroup({
-    title: new FormControl('', [Validators.required]),
+    titre: new FormControl('', [Validators.required]),
     description: new FormControl('', []),
     note: new FormControl<number | null>(null, [
       Validators.min(0),
@@ -27,9 +27,9 @@ export class AddOrEdditFilmComponent {
 
   save() {
     this.onSave.emit({
-      title: this.addOrEditFilmForm.controls.filmTitle.value,
-      description: this.addOrEditFilmForm.controls.filmSys.value,
-      note: this.addOrEditFilmForm.controls.filmNote.value,
+      title: this.addOrEditFilmForm.controls.titre.value,
+      description: this.addOrEditFilmForm.controls.description.value,
+      note: this.addOrEditFilmForm.controls.note.value,
     });
   }
 }
