@@ -13,5 +13,6 @@ export class AppComponent {
 
   addOrUpdateFilm(film: Film) {
     this.films.push(film);
+    console.log(this.films);
   }
 }

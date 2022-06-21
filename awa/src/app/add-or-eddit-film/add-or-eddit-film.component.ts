@@ -27,7 +27,7 @@ export class AddOrEdditFilmComponent {
 
   save() {
     this.onSave.emit({
-      title: this.addOrEditFilmForm.controls.titre.value,
+      titre: this.addOrEditFilmForm.controls.titre.value,
       description: this.addOrEditFilmForm.controls.description.value,
       note: this.addOrEditFilmForm.controls.note.value,
     });
