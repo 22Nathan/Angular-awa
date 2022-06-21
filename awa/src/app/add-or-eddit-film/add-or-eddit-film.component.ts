@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './add-or-eddit-film.component.html',
   styleUrls: ['./add-or-eddit-film.component.css'],
 })
-export class AddOrEditFilmComponent {
+export class AddOrEdditFilmComponent {
   addOrEditFilmForm = new FormGroup({
     title: new FormControl('', [Validators.required]),
     description: new FormControl('', []),
