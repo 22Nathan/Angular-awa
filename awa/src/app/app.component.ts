@@ -9,10 +9,9 @@ import { Film } from './film';
 export class AppComponent {
   title = 'awa';
 
-  films: any[] = [];
+  films: Film[] = [];
 
   addOrUpdateFilm(film: Film) {
     this.films.push(film);
-    console.log(this.films);
   }
 }
