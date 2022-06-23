@@ -10,11 +10,12 @@ import { Film } from '../film';
 export class FilmServiceComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
-  users: Film[] = [];
+  films: Object = [];
 
   ngOnInit(): void {
     this.http.get('http://localhost:3000/films').subscribe((res) => {
-      console.log('res', res);
+      this.films = res;
+      console.log(this.films);
     });
   }
 }
