@@ -13,15 +13,18 @@ export class FilmService {
     this.http
       .get('http://localhost:3000/films')
       .subscribe((res?: Film[] | any) => {
-        //this.films = res;
-        //return this.films;
-
-        return res;
+        this.films = res;
 
         // console.log(this.films);
         // console.log(this.films[0]['titre']);
         // console.log(this.films[0]['description']);
         // console.log(this.films[0]['note']);
+
+        //console.log(this.films);
+
+        return this.films;
+
+        //return res;
       });
   }
 }

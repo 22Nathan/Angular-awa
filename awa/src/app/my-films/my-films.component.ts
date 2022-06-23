@@ -10,12 +10,14 @@ import { FilmService } from '../service/film.service';
 export class MyFilmsComponent implements OnInit {
   @Input() films?: Film | any;
 
-  listeFilms: Film[] = [];
+  listeFilms: Film[] | any = [];
 
   constructor(private filmService: FilmService) {}
 
   ngOnInit(): void {
-    this.filmService.getFilms();
+    this.listeFilms = this.filmService.getFilms();
+
     console.log(this.filmService.getFilms());
+    console.log(this.listeFilms);
   }
 }
