@@ -1,19 +1,9 @@
 {
-  "posts": [
+  "films": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "titre": "dgdgdfgfd",
+      "description": "jssdfsdfsdfr",
+      "note": 2
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
