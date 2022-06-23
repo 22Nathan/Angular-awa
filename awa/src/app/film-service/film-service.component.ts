@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Film } from '../film';
 
 @Component({
   selector: 'app-film-service',
@@ -9,9 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class FilmServiceComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
+  users: Film[] = [];
+
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/users').subscribe(res => {
-      console.log('res', res)
-    })
+    this.http.get('http://localhost:3000/users').subscribe((res) => {
+      console.log('res', res);
+    });
   }
 }
