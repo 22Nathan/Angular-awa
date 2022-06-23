@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Film } from './film';
+import { FilmService } from './film.service';
 
 @Component({
   selector: 'app-root',

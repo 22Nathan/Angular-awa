@@ -12,17 +12,17 @@ export class FilmServiceComponent implements OnInit {
 
   films: Film[] = [];
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  getFilms() {
     this.http
       .get('http://localhost:3000/films')
       .subscribe((res?: Film[] | any) => {
         this.films = res;
-        console.log(this.films);
-        console.log(this.films[0]['titre']);
-        console.log(this.films[0]['description']);
-        console.log(this.films[0]['note']);
+        // console.log(this.films);
+        // console.log(this.films[0]['titre']);
+        // console.log(this.films[0]['description']);
+        // console.log(this.films[0]['note']);
       });
   }
-
-  //
 }
