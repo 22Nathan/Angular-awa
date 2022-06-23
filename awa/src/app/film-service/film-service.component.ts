@@ -12,18 +12,16 @@ export class FilmServiceComponent implements OnInit {
 
   films: Film[] = [];
 
-  // ngOnInit(): void {
-  //   this.http.get('http://localhost:3000/films').subscribe((res) => {
-  //     this.films = res;
-  //     console.log(this.films);
-  //   });
-  // }
-
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/films').subscribe((res: Film[]) => {
-      this.films = res;
-      console.log(this.films);
-    });
+    this.http
+      .get('http://localhost:3000/films')
+      .subscribe((res?: Film[] | any) => {
+        this.films = res;
+        console.log(this.films);
+        console.log(this.films[0]['titre']);
+        console.log(this.films[0]['description']);
+        console.log(this.films[0]['note']);
+      });
   }
 
   //
