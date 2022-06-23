@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Film } from '../film';
+import { FilmService } from '../service/film.service';
 
 @Component({
   selector: 'app-my-films',
@@ -9,7 +10,12 @@ import { Film } from '../film';
 export class MyFilmsComponent implements OnInit {
   @Input() films?: Film | any;
 
-  constructor() {}
+  listeFilms: Film[] = [];
 
-  ngOnInit(): void {}
+  constructor(private filmService: FilmService) {}
+
+  ngOnInit(): void {
+    this.filmService.getFilms();
+    console.log(this.filmService.getFilms());
+  }
 }
