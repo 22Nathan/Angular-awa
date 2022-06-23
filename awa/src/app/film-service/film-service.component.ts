@@ -13,7 +13,7 @@ export class FilmServiceComponent implements OnInit {
   users: Film[] = [];
 
   ngOnInit(): void {
-    this.http.get('http://localhost:3000/users').subscribe((res) => {
+    this.http.get('http://localhost:3000/films').subscribe((res) => {
       console.log('res', res);
     });
   }
