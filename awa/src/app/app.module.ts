@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddOrEdditFilmComponent } from './add-or-eddit-film/add-or-eddit-film.component';
 import { MyFilmsComponent } from './my-films/my-films.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
+import { DeleteFilmComponent } from './delete-film/delete-film.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FilmDetailsComponent } from './film-details/film-details.component';
     AddOrEdditFilmComponent,
     MyFilmsComponent,
     FilmDetailsComponent,
+    DeleteFilmComponent,
   ],
   imports: [
     BrowserModule,
