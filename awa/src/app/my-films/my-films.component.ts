@@ -15,16 +15,14 @@ export class MyFilmsComponent implements OnInit {
   constructor(private filmService: FilmService) {}
 
   // ngOnInit(): void {
-  //   this.listeFilms = this.filmService.getFilms();
-
+  //   this.films = this.filmService.getFilms();
   //   console.log(this.filmService.getFilms());
-  //   console.log('ffff ' + this.listeFilms);
   // }
 
   ngOnInit(): void {
-    this.filmService.getFilms().subscribe((films?: Film[] | any) => {
-      console.log(films);
+    this.filmService.getFilms().subscribe((films) => {
       this.films = films;
+
     });
   }
 }
