@@ -8,16 +8,23 @@ import { FilmService } from '../service/film.service';
   styleUrls: ['./my-films.component.css'],
 })
 export class MyFilmsComponent implements OnInit {
-  @Input() films?: Film | any;
+  // @Input() films?: Film | any;
 
-  listeFilms: Film[] | any = [];
+  films: Film[] | any = [];
 
   constructor(private filmService: FilmService) {}
 
-  ngOnInit(): void {
-    this.listeFilms = this.filmService.getFilms();
+  // ngOnInit(): void {
+  //   this.listeFilms = this.filmService.getFilms();
 
-    console.log(this.filmService.getFilms());
-    console.log('ffff ' + this.listeFilms);
+  //   console.log(this.filmService.getFilms());
+  //   console.log('ffff ' + this.listeFilms);
+  // }
+
+  ngOnInit(): void {
+    this.filmService.getFilms().subscribe((films?: Film[] | any) => {
+      console.log(films);
+      this.films = films;
+    });
   }
 }
