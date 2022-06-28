@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FilmService } from '../service/film.service';
 
 @Component({
   selector: 'app-add-or-eddit-film',
@@ -16,6 +17,8 @@ export class AddOrEdditFilmComponent {
     ]),
   });
 
+  constructor(private service: FilmService) {}
+
   @Output() onSave: EventEmitter<any> = new EventEmitter();
 
   save() {
@@ -23,6 +26,19 @@ export class AddOrEdditFilmComponent {
       titre: this.addOrEditFilmForm.controls.titre.value,
       description: this.addOrEditFilmForm.controls.description.value,
       note: this.addOrEditFilmForm.controls.note.value,
+    });
+  }
+
+  addFilms() {
+    this.service.addFilms(this.addOrEditFilmForm.value).subscribe({
+      next: (res) => {
+        console.log(res);
+        window.location.reload();
+      },
+
+      error: (err) => {
+        alert('error');
+      },
     });
   }
 }

@@ -27,4 +27,8 @@ export class FilmService {
   getFilms() {
     return this.http.get<Film[] | any>(`${environment.api}/films`);
   }
+  addFilms(data: any) {
+    return this.http.post<any>(`${environment.api}/films`, data);
+  }
+  
 }
