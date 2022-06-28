@@ -32,7 +32,6 @@ export class FilmService {
   }
   updateFilm() {}
   deleteFilm(data: any) {
-
     return this.http.delete<any>(`${environment.api}/films/${data['id']}`);
   }
 }

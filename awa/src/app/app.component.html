@@ -1,4 +1,4 @@
-<h1 class="text-center fs-1 my-3">Awa films</h1>
+<!-- <h1 class="text-center fs-1 my-3">Awa films</h1>
 
 <app-add-or-eddit-film
   (onSave)="addOrUpdateFilm($event)"
@@ -7,4 +7,21 @@
 <app-delete-film></app-delete-film>
 
 <!-- <app-my-films [films]="films"></app-my-films> -->
-<app-my-films></app-my-films>
+<!-- <app-my-films></app-my-films> -->
+
+<div class="container px-4 py-5" id="featured-3">
+  <h1 class="text-center fs-1 my-3">Awa films</h1>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+    <div class="feature col">
+      <app-add-or-eddit-film
+        (onSave)="addOrUpdateFilm($event)"
+      ></app-add-or-eddit-film>
+    </div>
+    <div class="feature col">
+      <app-delete-film></app-delete-film>
+    </div>
+    <div class="feature col">
+      <app-my-films></app-my-films>
+    </div>
+  </div>
+</div>
