@@ -17,7 +17,6 @@ export class DeleteFilmComponent {
   deleteFilm() {
     this.service.deleteFilm(this.deleteFilmForm.value).subscribe({
       next: (res) => {
-        console.log(res.value);
         window.location.reload();
       },
 
