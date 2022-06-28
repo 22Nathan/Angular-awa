@@ -2,7 +2,10 @@
 <div *ngFor="let film of films">
   <div class="container mb-3">
     <div class="card">
-      <div class="card-header">Titre : {{ film.titre }}</div>
+      <div class="card-header">
+        Titre :
+        <h2 class="bold fs-5">{{ film.titre }}</h2>
+      </div>
       <div class="card-body">
         <h1 class="card-title fs-5">Description :</h1>
         <p class="card-text">{{ film.description }}</p>
