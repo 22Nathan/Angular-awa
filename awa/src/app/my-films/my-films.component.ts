@@ -18,6 +18,6 @@ export class MyFilmsComponent implements OnInit {
     this.listeFilms = this.filmService.getFilms();
 
     console.log(this.filmService.getFilms());
-    console.log(this.listeFilms);
+    console.log('ffff ' + this.listeFilms);
   }
 }

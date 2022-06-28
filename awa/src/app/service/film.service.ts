@@ -7,7 +7,7 @@ import { Film } from '../film';
 })
 export class FilmService {
   constructor(private http: HttpClient) {}
-  films: Film[] = [];
+  films: Film[] | any = [];
 
   getFilms() {
     this.http
@@ -15,12 +15,10 @@ export class FilmService {
       .subscribe((res?: Film[] | any) => {
         this.films = res;
 
-        // console.log(this.films);
+        console.log(this.films);
         // console.log(this.films[0]['titre']);
         // console.log(this.films[0]['description']);
         // console.log(this.films[0]['note']);
-
-        //console.log(this.films);
 
         return this.films;
 
