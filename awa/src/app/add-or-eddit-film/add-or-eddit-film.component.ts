@@ -29,8 +29,8 @@ export class AddOrEdditFilmComponent {
     });
   }
 
-  addFilms() {
-    this.service.addFilms(this.addOrEditFilmForm.value).subscribe({
+  addFilm() {
+    this.service.addFilm(this.addOrEditFilmForm.value).subscribe({
       next: (res) => {
         console.log(res);
         window.location.reload();
