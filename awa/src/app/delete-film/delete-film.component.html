@@ -1,1 +1,24 @@
-<p>delete-film works!</p>
+<div class="container my-5 text-center">
+  <h1 class="text-start fs-3">Delete Film</h1>
+  <form [formGroup]="deleteFilmForm" (ngSubmit)="deleteFilm()">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="floatingInput"
+        placeholder="Nom du Film"
+        formControlName="id"
+        required
+      />
+      <label for="floatingInput">Nom du Film</label>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-lg btn-primary"
+      [disabled]="deleteFilmForm.invalid"
+    >
+      Valider
+    </button>
+  </form>
+</div>

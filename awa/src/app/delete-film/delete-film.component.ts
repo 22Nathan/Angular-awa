@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FilmService } from '../service/film.service';
 
 @Component({
   selector: 'app-delete-film',
   templateUrl: './delete-film.component.html',
-  styleUrls: ['./delete-film.component.css']
+  styleUrls: ['./delete-film.component.css'],
 })
-export class DeleteFilmComponent implements OnInit {
+export class DeleteFilmComponent {
+  deleteFilmForm = new FormGroup({
+    id: new FormControl('', [Validators.required]),
+  });
 
-  constructor() { }
+  constructor(private service: FilmService) {}
 
-  ngOnInit(): void {
+  deleteFilm() {
+    this.service.deleteFilm(this.deleteFilmForm.value).subscribe({
+      next: (res) => {
+        console.log(res.value);
+        window.location.reload();
+      },
+
+      error: (err) => {
+        alert('error');
+      },
+    });
   }
-
 }
