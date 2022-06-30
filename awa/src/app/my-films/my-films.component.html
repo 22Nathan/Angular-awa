@@ -1,20 +1,44 @@
 <h1 class="fs-3 mt-5 container">Liste des films</h1>
-<div class="overflow-auto">
-  <div *ngFor="let film of films">
-    <div class="container mb-3">
-      <div class="card">
-        <div class="card-header">
-          Titre :
-          <h2 class="bold fs-5">{{ film.titre }}</h2>
-        </div>
-        <div class="card-body">
-          <h1 class="card-title fs-5">Description :</h1>
-          <p class="card-text">{{ film.description }}</p>
-        </div>
-        <div class="card-footer">
-          <h1 class="card-title fs-5">Note : {{ film.note }}/5</h1>
-        </div>
+
+<div *ngFor="let film of films">
+  <div class="container mb-3">
+    <div class="card">
+      <div class="card-header">
+        Titre :
+        <h2 class="bold fs-5">{{ film.titre }}</h2>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title fs-5">Description :</h1>
+        <p class="card-text">{{ film.description }}</p>
+      </div>
+      <div class="card-footer">
+        <h1 class="card-title fs-5">Note : {{ film.note }}/5</h1>
       </div>
     </div>
   </div>
 </div>
+
+<!-- 
+<div class="row" data-masonry="{&quot;percentPosition&quot;: true }" style="position: relative; height: 1068px;">
+  <div *ngFor="let film of films">
+        <div class="col-sm-6 col-lg-4 mb-4" style="position: absolute; left: 0%; top: 0px;">
+    
+  <div class="container mb-3">
+    <div class="card">
+      <div class="card-header">
+        Titre :
+        <h2 class="bold fs-5">{{ film.titre }}</h2>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title fs-5">Description :</h1>
+        <p class="card-text">{{ film.description }}</p>
+      </div>
+      <div class="card-footer">
+        <h1 class="card-title fs-5">Note : {{ film.note }}/5</h1>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+ -->

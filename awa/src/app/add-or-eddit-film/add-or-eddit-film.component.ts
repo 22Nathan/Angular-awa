@@ -44,7 +44,7 @@ export class AddOrEdditFilmComponent {
       next: (res) => {
         console.log(res);
         window.location.reload();
-      }
+      },
     });
   }
 
