@@ -3,9 +3,24 @@
 <div *ngFor="let film of films">
   <div class="container mb-3">
     <div class="card">
-      <div class="card-header">
-        Titre : <span class="bold fs-5"> {{ film.titre }} </span>
-
+      <div class="card-header position-relative">
+        Titre :
+        <span class="bold fs-5"> {{ film.titre }} </span>
+        <span class="">
+          <button
+            type="button"
+            class="
+              btn btn-danger
+              position-absolute
+              top-50
+              end-0
+              translate-middle-y
+              mx-1
+            "
+          >
+            Delete /!\ pas encore implémenté
+          </button>
+        </span>
       </div>
       <div class="card-body">
         <h1 class="card-title fs-5">Description :</h1>
