@@ -45,4 +45,60 @@
       Valider
     </button>
   </form>
+
+  <!--  -->
+  <hr class="my-4" />
+  <!--  -->
+
+  <h1 class="text-start fs-3 mt-0">Update Film</h1>
+  <form [formGroup]="editFilmForm" (ngSubmit)="updateFilm()">
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        id="floatingInput"
+        class="form-control"
+        placeholder="Id du Film"
+        formControlName="id"
+      />
+      <label for="floatingInput">Id du Film</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        id="floatingInput"
+        class="form-control"
+        placeholder="Nom du Film"
+        formControlName="titre"
+      />
+      <label for="floatingInput">Nom du Film</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea
+        placeholder="Description"
+        id="floatingTextarea2"
+        class="form-control"
+        style="height: 100px"
+        formControlName="description"
+      ></textarea>
+      <label for="floatingTextarea2">Description</label>
+    </div>
+
+    <div class="form-floating mb-3">
+      <input
+        type="text"
+        id="floatingInput"
+        class="form-control"
+        placeholder="Note du Film"
+        formControlName="note"
+      />
+      <label for="floatingInput">Note du Film</label>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-lg btn-primary"
+      [disabled]="editFilmForm.invalid"
+    >
+      Valider
+    </button>
+  </form>
 </div>

@@ -30,7 +30,9 @@ export class FilmService {
   addFilm(data: any) {
     return this.http.post<any>(`${environment.api}/films`, data);
   }
-  updateFilm() {}
+  updateFilm(data: any) {
+    return this.http.put<any>(`${environment.api}/films/${data['id']}`, data);
+  }
   deleteFilm(data: any) {
     return this.http.delete<any>(`${environment.api}/films/${data['id']}`);
   }

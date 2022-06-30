@@ -1,16 +1,18 @@
 <h1 class="fs-3 mt-5 container">Liste des films</h1>
-<div *ngFor="let film of films">
-  <div class="container mb-3">
-    <div class="card">
-      <div class="card-header">
-        Titre :
-        <h2 class="bold fs-5">{{ film.titre }}</h2>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title fs-5">Description :</h1>
-        <p class="card-text">{{ film.description }}</p>
-        <h1 class="card-title fs-5">Note :</h1>
-        <p class="card-text">{{ film.note }}/5</p>
+<div class="overflow-auto">
+  <div *ngFor="let film of films">
+    <div class="container mb-3">
+      <div class="card">
+        <div class="card-header">
+          Titre :
+          <h2 class="bold fs-5">{{ film.titre }}</h2>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title fs-5">Description :</h1>
+          <p class="card-text">{{ film.description }}</p>
+          <h1 class="card-title fs-5">Note :</h1>
+          <p class="card-text">{{ film.note }}/5</p>
+        </div>
       </div>
     </div>
   </div>
