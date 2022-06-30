@@ -11,6 +11,7 @@ import { AddOrEdditFilmComponent } from './add-or-eddit-film/add-or-eddit-film.c
 import { MyFilmsComponent } from './my-films/my-films.component';
 import { FilmDetailsComponent } from './film-details/film-details.component';
 import { DeleteFilmComponent } from './delete-film/delete-film.component';
+import { EditFilmComponent } from './edit-film/edit-film.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DeleteFilmComponent } from './delete-film/delete-film.component';
     MyFilmsComponent,
     FilmDetailsComponent,
     DeleteFilmComponent,
+    EditFilmComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,15 +17,15 @@ export class AddOrEdditFilmComponent {
     ]),
   });
 
-  editFilmForm = new FormGroup({
-    id: new FormControl(''),
-    titre: new FormControl('', [Validators.required]),
-    description: new FormControl('', []),
-    note: new FormControl<number | null>(null, [
-      Validators.min(0),
-      Validators.max(5),
-    ]),
-  });
+  // editFilmForm = new FormGroup({
+  //   id: new FormControl(''),
+  //   titre: new FormControl('', [Validators.required]),
+  //   description: new FormControl('', []),
+  //   note: new FormControl<number | null>(null, [
+  //     Validators.min(0),
+  //     Validators.max(5),
+  //   ]),
+  // });
 
   constructor(private service: FilmService) {}
 
@@ -44,20 +44,16 @@ export class AddOrEdditFilmComponent {
       next: (res) => {
         console.log(res);
         window.location.reload();
-      },
-
-      error: (err) => {
-        alert('error');
-      },
+      }
     });
   }
 
-  updateFilm() {
-    this.service.updateFilm(this.editFilmForm.value).subscribe({
-      next: (res) => {
-        console.log(res);
-        window.location.reload();
-      },
-    });
-  }
+  // updateFilm() {
+  //   this.service.updateFilm(this.editFilmForm.value).subscribe({
+  //     next: (res) => {
+  //       console.log(res);
+  //       window.location.reload();
+  //     },
+  //   });
+  // }
 }

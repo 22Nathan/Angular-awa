@@ -1,56 +1,5 @@
 <div class="container my-5 text-center">
-  <h1 class="text-start fs-3">Add Film</h1>
-  <!-- <form [formGroup]="addOrEditFilmForm" (ngSubmit)="save()"> -->
-  <form [formGroup]="addOrEditFilmForm" (ngSubmit)="addFilm()">
-    <div class="form-floating mb-3">
-      <input
-        type="text"
-        class="form-control"
-        id="floatingInput"
-        placeholder="Nom du Film"
-        formControlName="titre"
-        required
-      />
-      <label for="floatingInput">Nom du Film</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <textarea
-        class="form-control"
-        placeholder="Description"
-        id="floatingTextarea2"
-        style="height: 100px"
-        formControlName="description"
-      ></textarea>
-      <label for="floatingTextarea2">Description</label>
-    </div>
-
-    <div class="form-floating mb-3">
-      <input
-        type="text"
-        class="form-control"
-        id="floatingInput"
-        placeholder="Note du Film"
-        formControlName="note"
-        required
-      />
-      <label for="floatingInput">Note du Film</label>
-    </div>
-
-    <button
-      type="submit"
-      class="btn btn-lg btn-primary"
-      [disabled]="addOrEditFilmForm.invalid"
-    >
-      Valider
-    </button>
-  </form>
-
-  <!--  -->
-  <!-- <hr class="my-4" /> -->
-  <!--  -->
-
-  <!-- <h1 class="text-start fs-3 mt-0">Update Film</h1>
+  <h1 class="text-start fs-3 mt-0">Update Film</h1>
   <form [formGroup]="editFilmForm" (ngSubmit)="updateFilm()">
     <div class="form-floating mb-3">
       <input
@@ -100,5 +49,5 @@
     >
       Valider
     </button>
-  </form> -->
+  </form>
 </div>
